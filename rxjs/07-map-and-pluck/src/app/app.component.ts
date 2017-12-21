@@ -46,12 +46,12 @@ export class AppComponent implements OnInit {
     .map( (v: string) => {
       return {
         value: v,
-        length: v.length()
+        nombre: v.length
       };
     })
     // on s'enregistre pour afficher les objets
     .subscribe((obj) => {
-      this.monTexte = obj.length;
+      this.monTexte = obj.nombre.toString();
     });
 
 
